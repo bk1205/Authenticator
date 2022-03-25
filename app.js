@@ -19,6 +19,7 @@ app.use(
   cors({
     origin: "https://oauthenticator.herokuapp.com",
     credentials: true,
+    allowedHeaders: "*",
   })
 );
 
