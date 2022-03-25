@@ -2,7 +2,10 @@ import axios from "axios";
 import { FETCH_USER, GET_STREAM } from "./types";
 
 export const fetchUser = () => async (dispatch) => {
-  const res = await axios.get("/auth/getUser", { withCredentials: true });
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+  };
+  const res = await axios.get("/auth/getUser", headers);
   console.log("reducer", res);
   dispatch({
     type: FETCH_USER,
