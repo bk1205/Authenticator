@@ -17,9 +17,8 @@ const server = http.createServer(app);
 
 app.use(
   cors({
-    origin: "https://oauthenticator.herokuapp.com",
+    origin: "*",
     credentials: true,
-    allowedHeaders: "*",
   })
 );
 
