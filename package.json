@@ -17,6 +17,7 @@
     "mongoose": "^5.11.17",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "socket.io": "^4.4.1"
   }
 }
