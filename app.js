@@ -14,13 +14,20 @@ const keys = require("./config/keys");
 const app = express();
 
 const server = http.createServer(app);
-
-app.use(
-  cors({
-    origin: "*",
-    credentials: true,
-  })
-);
+var whitelist = [
+  "https://oauthenticator.herokuapp.com",
+  "https://oauthenticatorbackend.herokuapp.com",
+];
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+};
+app.use(corsOptions);
 
 mongoose.connect(
   keys.database.mongodbURI,
