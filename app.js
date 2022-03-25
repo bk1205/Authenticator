@@ -42,6 +42,8 @@ app.use(passport.session());
 
 app.use("/auth", authRoutes);
 
-server.listen(4000, () => {
+port = process.env.PORT || 4000;
+
+server.listen(port, () => {
   console.log("Server is listening on port 4000");
 });
