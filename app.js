@@ -24,7 +24,12 @@ app.use(
 
 mongoose.connect(
   keys.database.mongodbURI,
-  { useNewUrlParser: true, useUnifiedTopology: true },
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  },
   () => {
     console.log("connected to mongodb");
   }
