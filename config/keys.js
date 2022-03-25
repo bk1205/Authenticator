@@ -7,7 +7,7 @@ module.exports = {
   },
   database: {
     mongodbURI:
-      "mongodb+srv://bk1205:Kumar^2000@cluster0.a6h6f.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+      "mongodb+srv://bk1205:Kumar^2000@cluster0.a6h6f.mongodb.net/chatrooms?retryWrites=true&w=majority",
   },
   session: {
     cookieKey: "bkumarIamDoyouknowme",
